@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Table as ATable, Tag, Menu, Dropdown, Button } from 'antd';
+import { Menu, Dropdown, Button } from 'antd';
 import 'antd/dist/antd.css';
 import { DownOutlined } from '@ant-design/icons';
 import './Chart.css'; 
@@ -7,18 +7,8 @@ import { Pie } from '@ant-design/charts';
 
 function Dashboard(props) {
     const [colleges, setColleges] = useState([]);
-    const [students, setStudents] = useState([]);
-    const [displayCollege, setDisplayCollege] = useState(false);
     const [statefilter, setStateFilter] = useState(true);
-    const getStudents = ()=>{
-        fetch("https://api-query.herokuapp.com/get/students")
-        .then(res=>res.json())
-        .then((result)=>{
-            setStudents(result);
-        },(error)=>{
-            console.log(error);
-        });
-    } 
+
     const getColleges = ()=>{
         fetch("https://api-query.herokuapp.com/get/colleges")
         .then(res=>res.json())
@@ -56,17 +46,7 @@ function Dashboard(props) {
         },
         interactions: [{ type: 'element-selected' }, { type: 'element-active' }],
       };
-      const tablemenu = (
-        <Menu>
-          <Menu.Item danger onClick={() => {setDisplayCollege(true)}} key="0">
-            Colleges
-          </Menu.Item>
-          <Menu.Divider />
-          <Menu.Item danger onClick={() => {setDisplayCollege(false)}} key="1">
-            Students
-          </Menu.Item>
-        </Menu>
-      );
+
       const chartmenu = (
         <Menu>
           <Menu.Item danger onClick={() => {setStateFilter(true)}} key="0">

@@ -134,27 +134,7 @@ function Table(props) {
               )
         }
       ];
-      let config = {
-        appendPadding: 10,
-        data: colleges,
-        angleField: 'noStudents',
-        colorField: statefilter?'state':'courses',
-        radius: 1,
-        innerRadius: 0.6,
-        label: {
-          type: 'inner',
-          offset: '-30%',
-          content: function content(_ref) {
-            var percent = _ref.percent;
-            return ''.concat((percent * 100).toFixed(0), '%');
-          },
-          style: {
-            fontSize: 14,
-            textAlign: 'center',
-          },
-        },
-        interactions: [{ type: 'element-selected' }, { type: 'element-active' }],
-      };
+
       const tablemenu = (
         <Menu>
           <Menu.Item danger onClick={() => {setDisplayCollege(true)}} key="0">
@@ -166,17 +146,7 @@ function Table(props) {
           </Menu.Item>
         </Menu>
       );
-      const chartmenu = (
-        <Menu>
-          <Menu.Item danger onClick={() => {setStateFilter(true)}} key="0">
-            State
-          </Menu.Item>
-          <Menu.Divider />
-          <Menu.Item danger onClick={() => {setStateFilter(false)}} key="1">
-            Courses
-          </Menu.Item>
-        </Menu>
-      );
+
     
     return (
       <>
