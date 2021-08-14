@@ -8,7 +8,7 @@ import { Pie } from '@ant-design/charts';
 function Dashboard(props) {
     const [colleges, setColleges] = useState([]);
     const [statefilter, setStateFilter] = useState(true);
-
+	
     const getColleges = ()=>{
         fetch("https://api-query.herokuapp.com/get/colleges")
         .then(res=>res.json())
@@ -21,7 +21,7 @@ function Dashboard(props) {
             console.log(error);
         });
     } 
-    useEffect(()=>{getStudents();},[]);
+
     useEffect(()=>{getColleges();},[]);
 
     
