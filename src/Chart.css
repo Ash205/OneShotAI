@@ -1,0 +1,39 @@
+/* .Wrapper {
+    background-color: #d9f7be;
+    display: flex;
+    min-width: 50vw;
+    justify-content: space-evenly;
+    align-items: center;
+} */
+.Container {
+    min-height: 80vh;
+    /* width: 25vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.left {
+    /* background-color: #0050b3; */
+    background-color: black;
+}
+
+.right {
+    /* background-color: #e4abac; */
+    background-color: black;
+}
+
+.shape {
+    position: absolute;
+    margin-left: 50vw;
+    background-color: transparent;
+    border-top: 100vh solid #0050b3;
+    /*border-left: 120vh solid transparent;*/
+    border-right: 50vh solid transparent;
+    max-width: 5vw;
+}
+
+/*.table td {
+    background-color: #ffbb96;
+    color: white;
+}*/
