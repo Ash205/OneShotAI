@@ -8,7 +8,6 @@ function Table(props) {
     const [colleges, setColleges] = useState([]);
     const [students, setStudents] = useState([]);
     const [displayCollege, setDisplayCollege] = useState(true);
-    const [statefilter, setStateFilter] = useState(true);
     const getStudents = ()=>{
         fetch("https://api-query.herokuapp.com/get/students")
         .then(res=>res.json())
