@@ -5,7 +5,8 @@ function Project(props){
     const [hover,setHover] = useState(false);
     return (
         <div className={hover ? 'project shadow' : 'project'} onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
-            <a href={props.link}>
+          {/*  <a href={props.link}>*/}
+<span>
             <div className="p1">
                 <img src={props.img} alt=""/>
             </div>
@@ -13,7 +14,8 @@ function Project(props){
                 <span className="project-title" >{props.name}</span>
                 <span className="project-description" ></span>
             </div>
-            </a>
+</span>
+           {/* </a>*/}
         </div>
     );
 }

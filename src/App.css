@@ -1,6 +1,6 @@
 .project-list-container{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 #root{
@@ -15,4 +15,8 @@
 .assign {
   text-align: center;
   margin-top: 10%;
+}
+.project-row {
+  margin-bottom: 100px;
+  margin-right: 200px;
 }

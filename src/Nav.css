@@ -25,9 +25,12 @@
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
-    padding-top: 8px;
+    /*padding-top: 8px;*/
     /* padding-bottom: 10px; */
     transition: border-radius 0.3s;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 .nav-links .nav-item:hover{
     border-radius: 0;

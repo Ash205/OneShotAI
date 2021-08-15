@@ -59,3 +59,10 @@ a, a:hover, a:active, a:visited, a:focus {
 .shadow{
     box-shadow: 3px 3px white;
 }
+span{
+    display:block;
+    min-width: 200px;
+    height: 75px;
+    text-decoration: none;
+    display: flex;
+}
